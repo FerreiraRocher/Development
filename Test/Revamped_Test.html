@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Perfect Landing Page</title>
+<style>
+    /* Basic Reset */
+    body, h1, h2, p, a, ul, li {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .hero img {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Features and Benefits */
+    .features-benefits {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .feature {
+      width: 30%;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+
+<style>
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body><header style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f2f2f2;"><img alt="Company Logo" src="logo.png" style="height: 50px;"/><nav><a href="#home" style="margin-left: 20px;">Home</a><a href="#about" style="margin-left: 20px;">About</a><a href="#contact us" style="margin-left: 20px;">Contact Us</a></nav></header>
+<!-- Hero Section -->
+<div class="hero">
+<h1>Unlock Your Potential</h1>
+<p>Empowering you to achieve your dreams</p>
+<img alt="Hero Image" src="https://via.placeholder.com/300"/>
+<div class="social-proof">
+<p>Join 5,000+ satisfied customers</p>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="cta">
+<a class="cta-button" href="#">Get Started</a>
+</div>
+<!-- Features and Benefits -->
+<div class="container features-benefits">
+<div class="feature">
+<h2>Speed</h2>
+<p>Experience blazing fast performance</p>
+</div>
+<div class="feature">
+<h2>Security</h2>
+<p>Your data is safe with us</p>
+</div>
+<div class="feature">
+<h2>Support</h2>
+<p>24/7 customer service</p>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<p>© 2023 Perfect Landing Page. All rights reserved.</p>
+</div>
+
+<div class="modal" id="myModal">
+<div class="modal-content">
+<span class="close">×</span>
+<form id="contactForm">
+<label for="name">Name:</label><br/>
+<input id="name" name="name" type="text"/><br/>
+<label for="subject">Subject:</label><br/>
+<input id="subject" name="subject" type="text"/><br/>
+<label for="message">Message:</label><br/>
+<textarea cols="50" id="message" maxlength="2000" name="message" rows="4"></textarea><br/>
+<input type="submit" value="Submit"/>
+</form>
+</div>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("getStartedBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Form submission logic here
+  // Note: Replace this with your actual email sending code
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Form submitted! This is where you would add the code to email the form.");
+  });
+</script>
+</body>
+</html>
